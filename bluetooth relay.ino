@@ -3,8 +3,7 @@ void setup() {
   // put your setup code here, to run once:
 Serial.begin(9600);
 //Pin 2 and 3 are just a test
-pinMode(3,OUTPUT);
-pinMode(2,OUTPUT);
+pinMode(13,OUTPUT);
 }
 
 void loop() {
@@ -15,14 +14,12 @@ void loop() {
       Serial.print(Incoming_value);
       Serial.print("/n");
       if (Incoming_value == 'A'){
-        Serial.println("3LOW");
-        digitalWrite(2,HIGH);
-        digitalWrite(3,LOW);
+        Serial.println("13 LOW");
+        digitalWrite(13,LOW);
       }
       else if(Incoming_value == 'a'){
-        Serial.println("3LOW");
-        digitalWrite(3,HIGH);
-        digitalWrite(2,LOW);
+        Serial.println("13 High");
+        digitalWrite(13,HIGH);
       }        
     }
 }
